@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PlaidItem {
+  id            String   @id @default(uuid())
+  accessToken   String
+  itemId        String
+  institutionId String?
+  institutionName String?
+  accounts      Account[]
+  createdAt     DateTime @default(now())
+}
+
+model Account {
+  id           String   @id @default(uuid())
+  plaidAccountId String
+  plaidItemId  String
+  plaidItem    PlaidItem @relation(fields: [plaidItemId], references: [id])
+  name         String
+  officialName String?
+  mask         String?
+  type         String?   // <-- allow null
+  subtype      String?   // <-- allow null
+  balances     Json
+}
+
