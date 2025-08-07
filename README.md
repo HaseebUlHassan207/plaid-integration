@@ -29,10 +29,13 @@ DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE_NAME
 
 ### 3. Run Prisma migrations
 
+```bash
 npx prisma generate
 npx prisma migrate dev
-
+```
 
 ### 4. Start the development server
 
+```bash
 npm run dev
+```
