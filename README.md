@@ -17,7 +17,7 @@
 git clone https://github.com/HaseebUlHassan207/plaid-integration.git
 cd plaid-integration
 npm install
-
+```
 
 ### 2. Set up Environment Variables
 
