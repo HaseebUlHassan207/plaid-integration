@@ -1,7 +1,7 @@
-# 🏦 Plaid Integration
+# Plaid Integration
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Next.js (App Router)**
 - **TypeScript**
